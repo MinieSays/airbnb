@@ -17,7 +17,7 @@ const currentUser = await getCurrentUser()
 if (!listing) {
     return (
         <ClientOnly>
-            <EmptyState />
+            <EmptyState subtitle="" />
         </ClientOnly>
     )
 }

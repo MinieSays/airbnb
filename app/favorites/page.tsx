@@ -22,6 +22,7 @@ if (listings?.length === 0) {
 return (
     <ClientOnly>
         <FavoritesClient
+        // @ts-ignore
             listings={listings}
             currentUser={currentUser}
         />

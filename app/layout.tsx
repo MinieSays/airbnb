@@ -11,6 +11,8 @@ import getCurrentUser from "./actions/getCurrentUser";
 import SearchModal from "./components/modals/SearchModal";
 import { Suspense } from "react";
 
+export const dynamic = 'force-dynamic'
+
 export const metadata: Metadata = {
   title: "Airbnb",
   description: "Airbnb Clone - Book your next vacation",

@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import Logo1 from '../../../public/images/Logo.png'
+
 
 const Logo = () => {
     const router = useRouter()
@@ -13,7 +15,7 @@ const Logo = () => {
     className="hidden md:block cursor-pointer"
     height="100"
     width="100"
-    src="/images/logo.png"
+    src={Logo1}
      />
   )
 }

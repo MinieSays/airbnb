@@ -6,7 +6,7 @@ import EmptyState from "./components/EmptyState";
 import ListingCard from "./components/listings/ListingCard";
 
 interface HomeProps {
-  searchParams: IListingsParams
+  searchParams: IListingsParams;
 }
 
 const Home = async ({ searchParams }: HomeProps) => {
@@ -22,7 +22,6 @@ const Home = async ({ searchParams }: HomeProps) => {
       </ClientOnly>
     );
   }
-
 
   return (
     <ClientOnly>
@@ -40,6 +39,13 @@ const Home = async ({ searchParams }: HomeProps) => {
     gap-8
     "
         >
+          <div className="text-center">
+            <h3 className="text-2xl font-semibold">Login For Guests:</h3>
+            <h2 className="text-md font-semibold">Username:</h2>
+            <h2 className="text-md">miniedomains@gmail.com</h2>
+            <h2 className="text-md font-semibold">Password:</h2>
+            <h2 className="text-md">Purple123$$</h2>
+          </div>
           {listings.map((listing) => {
             return (
               <div key={listing.title}>
@@ -54,17 +60,20 @@ const Home = async ({ searchParams }: HomeProps) => {
         </div>
       </Container>
       <div className="w-full mt-4 mb-[500px]">
-          <div className="relative mx-auto" style={{ paddingBottom: "200px", maxWidth: "800px" }}>
-            <iframe
-              src="https://www.loom.com/embed/64a176fb082540e4aeb222fa5787ccec?sid=1e247dd3-4e3a-4711-92c6-a3e50707e01d"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              className="absolute top-0 left-0 w-full h-full"
-              style={{ height: "400px" }} 
-            ></iframe>
-          </div>
+        <div
+          className="relative mx-auto"
+          style={{ paddingBottom: "200px", maxWidth: "800px" }}
+        >
+          <iframe
+            src="https://www.loom.com/embed/64a176fb082540e4aeb222fa5787ccec?sid=1e247dd3-4e3a-4711-92c6-a3e50707e01d"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            className="absolute top-0 left-0 w-full h-full"
+            style={{ height: "400px" }}
+          ></iframe>
         </div>
+      </div>
     </ClientOnly>
   );
-}
+};
 
 export default Home;
